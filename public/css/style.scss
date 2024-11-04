@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap');
+
+$primary-500: #217bad;
+$secondary-500: #123738;
+$transition-common: 0.3s;
+$font-serif: 'Noto Serif TC', sans-serif;
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: $primary-500;
+    background-image: url(../img/bg.webp);
+    background-size: 100%;
+    background-position: 0 0;
+    height: 2000px;
+    @media screen and (max-width: 1199px) {
+        padding-bottom: 60px;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+main {
+    overflow: hidden;
+    padding-top: 44px;
+    @media screen and (max-width: 767px) {
+        padding-top: 0;
+    }
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header {
+    padding: 10px 15px;
+    background-color: $primary-500;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    li {
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 0 15px;
+        position: relative;
+        transition: $transition-common;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 12px;
+            background-color: #fff;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        &:first-child {
+            &::before {
+                display: none;
+            }
+        }
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
