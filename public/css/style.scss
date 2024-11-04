@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap');
 
 $primary-500: #217bad;
-$secondary-500: #123738;
+$secondary-500: #00795a;
+$third-500: #e45d5c;
 $transition-common: 0.3s;
 $font-serif: 'Noto Serif TC', sans-serif;
 
 body {
     font-family: 'Noto Sans TC', sans-serif;
-    color: $primary-500;
-    background-image: url(../img/bg.webp);
-    background-size: 100%;
-    background-position: 0 0;
-    height: 2000px;
+    color: #000;
+    background-color: #fff;
+    // padding-top: 44px;
     @media screen and (max-width: 1199px) {
-        padding-bottom: 60px;
+        // padding-bottom: 60px;
     }
 }
 
@@ -33,7 +32,7 @@ input[type="number"] {
 
 main {
     overflow: hidden;
-    padding-top: 44px;
+    // padding-top: 44px;
     @media screen and (max-width: 767px) {
         padding-top: 0;
     }
@@ -76,6 +75,295 @@ main {
         }
         &:hover {
             opacity: 0.7;
+        }
+    }
+}
+
+.kv {
+    padding: 13.07vw 0 10.1vw;
+    position: relative;
+    &_logo {
+        display: block;
+        // width: 36vw;
+        width: 500px;
+        margin: 0 auto 70px;
+    }
+    &_h2 {
+        margin-bottom: 20px;
+        h2 {
+            font-size: 50px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.15em;
+            .green {
+                color: $secondary-500;
+            }
+        }
+        img {
+            width: 16px;
+            display: block;
+            margin: 0 20px;
+        }
+    }
+    &_h3 {
+        width: fit-content;
+        margin: 0 auto 20px;
+        position: relative;
+        h3 {
+            font-size: 46px;
+            letter-spacing: 0.13em;
+            margin: 0;
+            font-weight: 500;
+        }
+        &_dot {
+            width: 9px;
+            height: 9px;
+            background-color: $secondary-500;
+            border-radius: 50%;
+            margin: 0 20px 0 15px;
+        }
+        &::before, &::after {
+            position: absolute;
+            content: "";
+            width: 9px;
+            height: 34px;
+            background-color: $secondary-500;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &::before {
+            left: -25px;
+        }
+        &::after {
+            right: -25px;
+        }
+    }
+    &_inform {
+        h4 {
+            margin: 0;
+        }
+        &_small {
+            font-size: 16px;
+            transform: translateY(3px);
+        }
+        &_highlight {
+            color: $third-500;
+            font-size: 50px;
+            font-weight: 900;
+        }
+        &_percent {
+            font-size: 40px;
+            font-weight: 900;
+        }
+        &_unit {
+            font-size: 38px;
+            font-weight: 500;
+        }
+        &_superhighlight {
+            color: $third-500;
+            font-weight: 900;
+            font-size: 82px;
+            margin: 0 3px;
+        }
+        &_from {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            color: #fff;
+            font-size: 16px;
+            font-weight: normal;
+            border-radius: 50%;
+            padding-bottom: 3px;
+            position: absolute;
+            bottom: 15px;
+            right: 5px;
+        }
+        &_price {
+            position: relative;
+            padding-right: 25px;
+            &_unit {
+                transform: translateY(12px);
+            }
+        }
+        &_dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: #000;
+            margin: 0 15px;
+        }
+    }
+    &_geometry {
+        position: absolute;
+        &_1 {
+            width: 45%;
+            top: -5.68vw;
+            right: -13.85%;
+        }
+        &_2 {
+            width: 41.67%;
+            top: 10.63vw;
+            left: -17.76%;
+        }
+    }
+    &_bubble {
+        position: absolute;
+        &_1 {
+            width: 21.15%;
+            bottom: -9.2%;
+            left: -5.62%;
+        }
+        &_2 {
+            width: 7.96%;
+            bottom: 0;
+            right: 11%;
+        }
+        &_3 {
+            width: 3.93%;
+            bottom: 19.16%;
+            left: 24.79%;
+        }
+        &_4 {
+            width: 25%;
+            top: 4.5%;
+            left: -4%;
+        }
+        &_5 {
+            width: 30%;
+            bottom: -3%;
+            right: -9%;
+        }
+    }
+    @media screen and (max-width: 1299px) {
+        &_geometry {
+            &_1 {
+                width: 40%;
+            }
+            &_2 {
+                width: 36%;
+            }
+        }
+        &_bubble {
+            &_3 {
+                left: 20%;
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &_logo {
+            width: 270px;
+            margin-bottom: 25px;
+        }
+        &_h2 {
+            h2 {
+                font-size: 26px;
+            }
+            img {
+                width: 8px;
+                margin: 0 13px;
+            }
+        }
+        &_h3 {
+            h3 {
+                font-size: 24px;
+            }
+            &_dot {
+                width: 4px;
+                height: 4px;
+                margin: 0 10px 0 7px;
+            }
+            &::before, &::after {
+                width: 4px;
+                height: 15px;
+            }
+            &::before {
+                left: -16px;
+            }
+            &::after {
+                right: -16px;
+            }
+        }
+        &_inform {
+            &_small {
+                font-size: 12px;
+            }
+            &_highlight {
+                font-size: 32px;
+            }
+            &_percent {
+                font-size: 20px;
+            }
+            &_unit {
+                font-size: 19px;
+                transform: translateY(6px);
+            }
+            &_superhighlight {
+                font-size: 38px;
+            }
+            &_from {
+                width: 17px;
+                height: 17px;
+                font-size: 12px;
+                padding-bottom: 0px;
+                bottom: 5px;
+                right: 3px;
+            }
+            &_dot {
+                width: 4px;
+                height: 4px;
+                margin: 0 5px;
+            }
+            &_price {
+                padding-right: 15px;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        padding: 35vw 0 36vw;
+        &_geometry {
+            &_1 {
+                width: 45%;
+                right: -21%;
+                top: -11vw;
+            }
+            &_2 {
+                width: 60%;
+                left: -20%;
+                top: inherit;
+                bottom: -2.5%;
+            }
+        }
+    }
+    @media screen and (max-width: 450px) {
+        padding: 67.78vw 0 73.15vw;
+        &_geometry {
+            &_1 {
+                width: 85%;
+                right: -42.76%;
+                top: -26vw;
+            }
+            &_2 {
+                width: 95%;
+                left: -65%;
+                top: inherit;
+                bottom: -5.29%;
+            }
+        }
+        &_bubble {
+            &_4 {
+                width: 37.1%;
+                top: 8.75%;
+                left: -7.81%;
+            }
+            &_5 {
+                width: 56.81%;
+                bottom: -4.61%;
+                right: -18.9%;
+
+            }
         }
     }
 }
