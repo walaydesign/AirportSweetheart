@@ -1,17 +1,36 @@
 AOS.init({startEvent: 'load'});
 window.addEventListener('load', AOS.refresh);
 
+function sendEmail(){
+    Email.send({
+        SecureToken: "8207c7d7-4a6c-4797-870d-d16ee71023ce",
+        To : "yl301114@gmail.com",
+        From : "walayydesign@gmail.com",
+        Subject : "航綻甜心預約賞屋",
+        Body : "姓名:" + document.getElementById("name").value
+                + "<br>電話:" + document.getElementById("phone").value
+                + "<br>需求房型:" + document.getElementById("type").value
+                + "<br>聯繫內容:" + document.getElementById("content").value
+    }).then(
+        message => alert("感謝您的來信！我們很快就會和您聯繫！"),
+    );
+}
+
 $(".header_item").click(function(){
     let target = $(this).data("target");
     var top = $(target).offset().top - 70;
     $("html, body").animate({ scrollTop: top }, parseInt(300));
 })
 
+$(".btn-top").click(function(){
+    $("html, body").animate({scrollTop: 0},300);
+})
+
 var swiperCore = new Swiper(".core_swiper", {
     slidesPerView: 1,
     navigation: {
-        nextEl: ".core_swiper-next",
-        prevEl: ".core_swiper-prev",
+        nextEl: "#core_swiper-next",
+        prevEl: "#core_swiper-prev",
     },
     speed: 800,
     // autoplay: {
@@ -19,7 +38,7 @@ var swiperCore = new Swiper(".core_swiper", {
     //     disableOnInteraction: false,
     // },
     pagination: {
-        el: ".swiper-pagination",
+        el: "#core_swiper_pagination",
         clickable: true,
     },
     allowTouchMove: false,
@@ -106,3 +125,60 @@ $(".green_tab_item").click(function(){
     let li_index = $(this).index();
     swiperGreen.slideTo(li_index, 1000, true);
 })
+
+var swiperBuildingPic = new Swiper(".building_swiper-pic", {
+    slidesPerView: 1,
+    speed: 800,
+    allowTouchMove: false,
+    navigation: {
+        nextEl: "#building_swiper_next",
+        prevEl: "#building_swiper_prev",
+    },
+    pagination: {
+        el: "#building_swiper_pagination",
+        clickable: true,
+    },
+})
+
+var swiperBuildingText = new Swiper(".building_swiper-text", {
+    slidesPerView: 1,
+    speed: 800,
+    allowTouchMove: false,
+    navigation: {
+        nextEl: "#building_swiper_next",
+        prevEl: "#building_swiper_prev",
+    },
+    pagination: {
+        el: "#building_swiper_pagination",
+        clickable: true,
+    },
+})
+
+var swiperArrangePic = new Swiper(".arrange_swiper-pic", {
+    slidesPerView: 1,
+    speed: 800,
+    allowTouchMove: false,
+    navigation: {
+        nextEl: "#arrange_swiper_next",
+        prevEl: "#arrange_swiper_prev",
+    },
+    pagination: {
+        el: "#arrange_swiper_pagination",
+        clickable: true,
+    },
+})
+
+var swiperArrangeText = new Swiper(".arrange_swiper-text", {
+    slidesPerView: 1,
+    speed: 800,
+    allowTouchMove: false,
+    navigation: {
+        nextEl: "#arrange_swiper_next",
+        prevEl: "#arrange_swiper_prev",
+    },
+    pagination: {
+        el: "#arrange_swiper_pagination",
+        clickable: true,
+    },
+})
+
