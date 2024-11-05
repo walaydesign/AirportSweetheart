@@ -19,3 +19,23 @@ var swiperCore = new Swiper(".core_swiper", {
     allowTouchMove: false,
     // loop: true,
 })
+
+var swiperSweetlife = new Swiper(".sweetlife_swiper", {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: ".core_swiper-next",
+        prevEl: ".core_swiper-prev",
+    },
+    speed: 800,
+    // autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    // },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    allowTouchMove: false,
+    // loop: true,
+})

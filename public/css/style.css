@@ -1787,4 +1787,194 @@ main {
     width: calc(100% - 70px);
   }
 }
+
+.sweetlife_head {
+  margin-bottom: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sweetlife_title_ch {
+  padding-left: 52px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.sweetlife_title_ch h2 {
+  color: #00795a;
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.2em;
+}
+
+.sweetlife_title_ch::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 44px;
+  background-color: #00795a;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sweetlife_title_square {
+  width: 12px;
+  height: 12px;
+  background-color: #00795a;
+  margin: 0 30px 0 20px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.sweetlife_title_en {
+  font-size: 20px;
+  font-family: "Noto Serif TC", sans-serif;
+  color: #00795a;
+  opacity: 0.21;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.sweetlife_subtitle {
+  font-size: 30px;
+  letter-spacing: 0.15em;
+}
+
+.sweetlife_subtitle .highlight {
+  color: #217bad;
+}
+
+.sweetlife_place_item {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 1px solid #00795a;
+}
+
+.sweetlife_place_item p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  font-size: 32px;
+  color: #00795a;
+  letter-spacing: 0.2em;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(5px, -50%);
+          transform: translate(5px, -50%);
+}
+
+.sweetlife_place_item:first-child {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.sweetlife_place_item:nth-child(2) {
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+.sweetlife_place_item:nth-child(3) {
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
+}
+
+.sweetlife_place_item:nth-child(even) {
+  background-color: #00795a;
+  font-weight: 500;
+}
+
+.sweetlife_place_item:nth-child(even) p {
+  color: #fff;
+}
+
+.sweetlife_text {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+  margin-bottom: 70px;
+  text-align: justify;
+}
+
+.sweetlife_text .highlight {
+  color: #00795a;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1399px) {
+  .sweetlife > .container {
+    max-width: inherit;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .sweetlife_head {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sweetlife > .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 320px;
+  }
+  .sweetlife_title_ch {
+    padding-left: 24px;
+    margin-bottom: 10px;
+  }
+  .sweetlife_title_ch h2 {
+    font-size: 24px;
+  }
+  .sweetlife_title_ch::before {
+    width: 10px;
+    height: 20px;
+  }
+  .sweetlife_title_square {
+    width: 6px;
+    height: 6px;
+    margin: 0 15px 0 10px;
+  }
+  .sweetlife_title_en {
+    font-size: 17px;
+  }
+  .sweetlife_subtitle {
+    font-size: 18px;
+  }
+  .sweetlife_place_item {
+    width: 46px;
+    height: 46px;
+  }
+  .sweetlife_place_item p {
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    -webkit-transform: translate(1px, -50%);
+            transform: translate(1px, -50%);
+  }
+  .sweetlife_place_item:first-child {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .sweetlife_place_item:nth-child(2) {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  .sweetlife_place_item:nth-child(3) {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  .sweetlife_text {
+    font-size: 14px;
+  }
+  .sweetlife_head {
+    margin-bottom: 30px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

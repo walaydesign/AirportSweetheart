@@ -1632,3 +1632,191 @@ main {
         }
     }
 }
+
+.sweetlife {
+    &_head {
+        margin-bottom: 70px;
+        display: flex;
+    }
+    &_title {
+        &_ch {
+            padding-left: 52px;
+            position: relative;
+            margin-bottom: 20px;
+            h2 {
+                color: $secondary-500;
+                font-size: 48px;
+                font-weight: 500;
+                margin: 0;
+                letter-spacing: 0.2em;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 44px;
+                background-color: $secondary-500;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+        &_square {
+            width: 12px;
+            height: 12px;
+            background-color: $secondary-500;
+            margin: 0 30px 0 20px;
+            transform: rotate(45deg);
+        }
+        &_en {
+            font-size: 20px;
+            font-family: $font-serif;
+            color: $secondary-500;
+            opacity: 0.21;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+        }
+    }
+    &_subtitle {
+        font-size: 30px;
+        letter-spacing: 0.15em;
+        .highlight {
+            color: $primary-500;
+        }
+    }
+    &_place {
+        // width: 350px;
+        &_item {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 1px solid $secondary-500;
+            p {
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                margin: 0;
+                font-size: 32px;
+                color: $secondary-500;
+                letter-spacing: 0.2em;
+                left: 0;
+                top: 50%;
+                transform: translate(5px, -50%);
+            }
+            &:first-child {
+                transform: none;
+            }
+            &:nth-child(2) {
+                transform: translateX(-20px);
+            }
+            &:nth-child(3) {
+                transform: translateX(-40px);
+            }
+            &:nth-child(even) {
+                background-color: $secondary-500;
+                font-weight: 500;
+                p {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &_text {
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        line-height: 1.7;
+        margin-bottom: 70px;
+        text-align: justify;
+        .highlight {
+            color: $secondary-500;
+            font-weight: 700;
+        }
+    }
+    &_swiper {
+        &_text {
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            img {
+                width: 17px;
+                margin-right: 10px;
+            }
+            h4 {
+                font-size: 28px;
+                color: $secondary-500;
+                margin: 0;
+                letter-spacing: 0.2em;
+            }
+        }
+    }
+    @media screen and (max-width: 1399px) {
+        >.container {
+            max-width: inherit;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        &_head {
+            display: block;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        >.container {
+            padding-left: 20px;
+            padding-right: 20px;
+            max-width: 320px;
+        }
+        &_title {
+            &_ch {
+                padding-left: 24px;
+                margin-bottom: 10px;
+                h2 {
+                    font-size: 24px;
+                }
+                &::before {
+                    width: 10px;
+                    height: 20px;
+                }
+            }
+            &_square {
+                width: 6px;
+                height: 6px;
+                margin: 0 15px 0 10px;
+            }
+            &_en {
+                font-size: 17px;
+            }
+        }
+        &_subtitle {
+            font-size: 18px;
+        }
+        &_place {
+            &_item {
+                width: 46px;
+                height: 46px;
+                p {
+                    letter-spacing: 0.1em;
+                    font-size: 14px;
+                    transform: translate(1px, -50%)
+                }
+                &:first-child {
+                    transform: none;
+                }
+                &:nth-child(2) {
+                    transform: translateX(-5px);
+                }
+                &:nth-child(3) {
+                    transform: translateX(-10px);
+                }
+            }
+        }
+        &_text {
+            font-size: 14px;
+        }
+        &_head {
+            margin-bottom: 30px;
+        }
+    }
+}
