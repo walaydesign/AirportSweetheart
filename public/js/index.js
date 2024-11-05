@@ -1,6 +1,12 @@
 AOS.init({startEvent: 'load'});
 window.addEventListener('load', AOS.refresh);
 
+$(".header_item").click(function(){
+    let target = $(this).data("target");
+    var top = $(target).offset().top - 70;
+    $("html, body").animate({ scrollTop: top }, parseInt(300));
+})
+
 var swiperCore = new Swiper(".core_swiper", {
     slidesPerView: 1,
     navigation: {
