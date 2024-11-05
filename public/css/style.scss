@@ -367,3 +367,726 @@ main {
         }
     }
 }
+
+.airport {
+    padding-top: 8vw;
+    padding-bottom: 44.38vw;
+    background-image: url(../img/airport_bg.webp);
+    background-size: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position: relative;
+    >.container {
+        max-width: 1500px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    &_title {
+        margin-bottom: 40px;
+        padding-left: 53px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 18px;
+            height: 50px;
+            background-color: $primary-500;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        &_ch {
+            font-size: 48px;
+            font-weight: 700;
+            color: $primary-500;
+            margin: 0;
+            letter-spacing: 0.15em;
+        }
+        &_dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background-color: $primary-500;
+            margin: 0 20px;
+        }
+        &_en {
+            color: $primary-500;
+            font-family: $font-serif;
+            font-weight: 700;
+            margin: 0;
+            opacity: 0.2;
+            font-size: 60px;
+            letter-spacing: 0.15em;
+            margin-left: 10px;
+        }
+    }
+    &_size {
+        margin-bottom: 20px;
+        h3, h4 {
+            margin: 0;
+        }
+        &_num {
+            font-size: 46px;
+            font-weight: 700;
+            color: $third-500;
+        }
+        &_unit {
+            font-size: 29px;
+            font-weight: 700;
+            color: $third-500;
+        }
+        &_triangle {
+            width: 6px;
+            margin: 0 15px;
+        }
+        &_intro {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            .highlight {
+                font-size: 29px;
+                color: $third-500;
+            }
+        }
+        &_dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #000;
+            margin: 0 10px;
+        }
+    }
+    &_text {
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        font-weight: 300;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    &_route {
+        &_square {
+            width: 17px;
+            height: 17px;
+            background-color: #000;
+            margin-right: 10px;
+        }
+        &_text {
+            font-size: 26px;
+            margin: 0;
+            font-weight: 500;
+            line-height: 0.1em;
+        }
+        &_triangle {
+            width: 13px;
+            margin: 0 10px;
+        }
+    }
+    &_slogan {
+        font-family: $font-serif;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        padding-left: 100px;
+        position: relative;
+        z-index: 0;
+        span {
+            display: block;
+            &:nth-child(2) {
+                transform: translateX(50px);
+                margin-top: 20px;
+            }
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 146px;
+            height: 146px;
+            background-image: url(../img/airport_bubble.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+    }
+    &_deco {
+        position: absolute;
+        width: 39.23%;
+        right: -27%;
+        bottom: -5%;
+        z-index: 1;
+    }
+    @media screen and (max-width: 1399px) {
+        &_title {
+            padding-left: 40px;
+            &::before {
+                width: 15px;
+                height: 40px;
+            }
+            &_ch {
+                font-size: 34px;
+            }
+            &_en {
+                font-size: 42px;
+            }
+        }
+        &_size {
+            width: fit-content;
+            margin-bottom: 20px;
+            &_head {
+                position: relative;
+                // width: fit-content;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: calc(100% - 200px);
+                    height: 1px;
+                    background-color: #000;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        &_route {
+            &_text {
+                font-size: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        &_slogan {
+            width: fit-content;
+            margin: 0 auto;
+            padding-left: 50px;
+            &-wrap {
+                margin-top: 100px;
+            }
+            &::before {
+                left: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        padding-top: 23.69vw;
+        padding-bottom: 107.55vw;
+        background-image: url(../img/airport_bg_m.webp);
+        >.container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        &_title {
+            width: calc(100% * 10 / 12);
+            margin-left: auto;
+            margin-right: auto;
+            &::before {
+                transform: none;
+                top: 0;
+            }
+            &_en {
+                margin: 0;
+                transform: translateX(-40px);
+            }
+        }
+    }
+    @media screen and (max-width: 660px) {
+        &_title {
+            width: 100%;
+        }
+        &_main {
+            width: 100%;
+        }
+        &_slogan {
+            font-size: 14px;
+            padding-left: 15px;
+            transform: translateX(-30px);
+            span {
+                &:nth-child(2) {
+                    transform: translateX(30px);
+                    margin-top: 10px;
+                }
+            }
+            &-wrap {
+                width: 100%;
+            }
+            &::before {
+                width: 46px;
+                height: 46px;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &_title {
+            padding-left: 20px;
+            &::before {
+                width: 5px;
+                height: 20px;
+                top: 5px;
+            }
+            &_ch {
+                font-size: 22px;
+            }
+            &_dot {
+                width: 4px;
+                height: 4px;
+                margin: 0 8px;
+            }
+            &_en {
+                font-size: 18px;
+                transform: translateX(-20px);
+            }
+        }
+        &_size {
+            &_head {
+                // width: fit-content;
+                &::after {
+                    width: calc(100% - 100px);
+                }
+            }
+            &_num {
+                font-size: 21px;
+            }
+            &_unit {
+                font-size: 16px;
+            }
+            &_intro {
+                font-size: 16px;
+                .highlight {
+                    font-size: 17px;
+                }
+            }
+            &_dot {
+                width: 4px;
+                height: 4px;
+                margin: 0 5px;
+            }
+        }
+        &_text {
+            font-size: 15px;
+        }
+        &_route {
+            &_square {
+                width: 6px;
+                height: 6px;
+                margin-right: 5px;
+            }
+            &_text {
+                font-size: 13px;
+            }
+            &_triangle {
+                width: 4px;
+                margin: 0 5px;
+            }
+        }
+    }
+    @media screen and (max-width: 360px) {
+        &_title {
+            &_ch {
+                font-size: 18px;
+            }
+            &::before {
+                top: 2px;
+            }
+        }
+    }
+}
+
+.strength {
+    padding: 80px 0 200px;
+    background-color: #0076d0;
+    margin-top: -2px;
+    position: relative;
+    &_title {
+        margin-bottom: 20px;
+        h2 {
+            margin: 0;
+            color: #fff;
+            font-size: 46px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+        }
+        &_dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 0 20px;
+        }
+    }
+    &_subtitle {
+        color: #fff;
+        margin-bottom: 95px;
+        h3 {
+            font-size: 28px;
+            font-weight: normal;
+            margin: 0;
+            letter-spacing: 0.1em;
+            .highlight {
+                color: #ffee00;
+                font-weight: 700;
+                font-size: 38px;
+                letter-spacing: 0.05em;
+            }
+        }
+        &_divide {
+            width: 5px;
+            height: 26px;
+            background-color: #fff;
+            margin: 0 20px;
+            transform: translateY(5px);
+        }
+    }
+    &_row {
+        position: relative;
+        margin-bottom: 70px;
+        &_title {
+            font-size: 36px;
+            color: #fff;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+            width: fit-content;
+            margin: 0 auto 25px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 36px;
+                height: 36px;
+                background-image: url(../img/strength_taregt.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                top: 50%;
+                left: -50px;
+                transform: translateY(-45%);
+            }
+        }
+        &_divide {
+            position: absolute;
+            width: 40px;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    }
+    &_industry {
+        width: 33.3333%;
+        padding-bottom: 33.3333%;
+        position: relative;
+        // z-index: 0;
+        &-wrap {
+            padding: 0 40px;
+        }
+        >p {
+            position: absolute;
+            margin: 0;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 5px rgba(0,0,0,0.5);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+        }
+        &::after {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            content: "";
+            background: linear-gradient(33deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 15%, rgba(220, 225, 233, 0.85) 77%, rgba(220, 225, 233, 0.85) 100%);
+            mix-blend-mode: multiply;
+            border-radius: 50%;
+            // z-index: -1;
+        }
+    }
+    &_company {
+        display: flex;
+        padding: 0 80px;
+        &:first-child {
+            margin-top: 50px;
+        }
+        &_item {
+            display: flex;
+            align-items: center;
+            padding: 10px 30px;
+            width: 50%;
+            margin-bottom: 35px;
+            &.whitebg {
+                background-color: #fff;
+                border-radius: 100px 0 0 100px;
+                color: #003980;
+            }
+            &.bluebg {
+                background-color: #003980;
+                border-radius: 0 100px 100px 0;
+                color: #fff;
+            }
+        }
+        &_triangle {
+            width: 10px;
+            margin-right: 15px;
+        }
+        &_text {
+            font-size: 24px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: calc(100% - 10px - 15px);
+        }
+    }
+    &_divide-m {
+        margin: 50px 0;
+        width: 100%;
+        display: block;
+    }
+    &_text {
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: 0.2em;
+        color: #fff;
+        line-height: 1.6;
+        .highlight {
+            font-weight: 700;
+            color: #ffee00;
+        }
+    }
+    &_bubble {
+        width: 12%;
+        position: absolute;
+        left: -2.8%;
+        bottom: 3.7%;
+    }
+    &_geometry {
+        width: 33.7%;
+        position: absolute;
+        right: -23.6%;
+        top: 0;
+    }
+    @media screen and (max-width: 1500px) {
+        &_bubble {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 1399px) {
+        >.container {
+            max-width: inherit;
+        }
+        &_title, &_subtitle {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        &_company {
+            padding: 0 40px;
+        }
+        &_industry {
+            >p {
+                font-size: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        &_company, &_industry-wrap {
+            padding: 0 20px;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &_title {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            h2 {
+                font-size: 22px;
+            }
+            &_dot {
+                width: 4px;
+                height: 4px;
+                margin: 0 5px;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                width: calc(100% - (100% - 280px) / 2 + 20px);
+                height: 1px;
+                background-color: #ffed00;
+                left: -20px;
+                bottom: 0;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #ffed00;
+                right: calc((100% - 280px) / 2);
+                bottom: 0;
+                transform: translateY(calc(50% - 1px));
+            }
+        }
+        &_subtitle {
+            width: 280px;
+            margin: 0 auto 95px;
+            h3 {
+                font-size: 18px;
+                position: relative;
+                .highlight {
+                    font-size: 20px;
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: #ffed00;
+                    top: 50%;
+                    left: -15px;
+                    transform: translateY(-10%);
+                }
+            }
+            &_top {
+                margin-bottom: 10px !important;
+            }
+            &_bottom {
+                width: fit-content;
+                margin-left: auto !important;
+            }
+        }
+        &_row {
+            max-width: 500px;
+            margin: 0 auto;
+            &_divide {
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        padding: 40px 0 50px;
+        &_row {
+            >div {
+                padding: 0;
+            }
+            &_title {
+                font-size: 20px;
+                &::before {
+                    width: 20px;
+                    height: 20px;
+                    left: -25px;
+                }
+            }
+        }
+        &_industry {
+            >p {
+                font-size: 16px;
+            }
+            &-wrap {
+                padding: 0;
+            }
+        }
+        &_company {
+            padding: 0;
+            &:first-child {
+                margin-top: 0;
+            }
+            &_text {
+                font-size: 18px;
+                width: calc(100% - 15px);
+            }
+            &_item {
+                margin-bottom: 20px;
+                padding: 10px 15px;
+            }
+            &_triangle {
+                width: 5px;
+                margin-right: 10px;
+            }
+        }
+        &_divide-m {
+            margin: 30px 0;
+        }
+    }
+}
+
+.map {
+    position: relative;
+    &_bubble {
+        position: absolute;
+        &-1 {
+            width: 16.48%;
+            top: -12.58%;
+            right: -8%;
+        }
+        &-2 {
+            width: 10.91%;
+            bottom: -8.1%;
+            left: 7.6%;
+        }
+    }
+    &_text {
+        position: absolute;
+        color: #fff;
+        font-size: 13px;
+        text-shadow: 0 0 5px #000;
+        letter-spacing: 0.3em;
+        bottom: 25px;
+        left: 25px;
+    }
+    &_title {
+        padding-top: 113px;
+        padding-bottom: 20px;
+        text-align: center;
+        background-color: #0075ce;
+        // background: linear-gradient(to bottom, #0075ce 0%, #0075ce 85%, rgba(0, 117, 206, 0) 100%);
+        z-index: 1;
+        &_ch {
+            font-size: 32px;
+            font-family: $font-serif;
+            color: #fff100;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        &_en {
+            font-size: 14px;
+            font-family: $font-serif;
+            color: #a4c4ec;
+            margin-bottom: 15px;
+        }
+    }
+    &_subtitle {
+        width: fit-content;
+        margin: 0 auto;
+        h4 {
+            font-size: 20px;
+            letter-spacing: 0.2em;
+            color: #fff;
+            font-weight: normal;
+            margin: 0 auto;
+            width: fit-content;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            width: 180px;
+            margin: 0;
+        }
+    }
+    &_wrap {
+        height: 600px;
+        overflow-x: auto;
+        margin-top: -2px;
+        // z-index: -1;
+        >img {
+            height: 100%;
+        }
+    }
+}
