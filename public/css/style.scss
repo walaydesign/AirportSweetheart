@@ -12,7 +12,7 @@ body {
     background-color: #fff;
     // padding-top: 44px;
     @media screen and (max-width: 1199px) {
-        // padding-bottom: 60px;
+        padding-bottom: 60px;
     }
 }
 
@@ -91,7 +91,7 @@ main {
     &_logo {
         display: block;
         // width: 36vw;
-        width: 500px;
+        width: 510px;
         margin: 0 auto 70px;
     }
     &_h2 {
@@ -141,7 +141,7 @@ main {
             left: -25px;
         }
         &::after {
-            right: -25px;
+            right: -20px;
         }
     }
     &_inform {
@@ -184,14 +184,14 @@ main {
             border-radius: 50%;
             padding-bottom: 3px;
             position: absolute;
-            bottom: 15px;
+            bottom: 28px;
             right: 5px;
         }
         &_price {
             position: relative;
             padding-right: 25px;
             &_unit {
-                transform: translateY(12px);
+                transform: translateY(0px);
             }
         }
         &_dot {
@@ -199,13 +199,13 @@ main {
             height: 9px;
             border-radius: 50%;
             background-color: #000;
-            margin: 0 15px;
+            margin: 0 13px;
         }
     }
     &_geometry {
         position: absolute;
         &_1 {
-            width: 45%;
+            width: 39.27%;
             top: -5.68vw;
             right: -13.85%;
         }
@@ -214,6 +214,13 @@ main {
             top: 10.63vw;
             left: -17.76%;
         }
+    }
+    &_girl {
+        position: absolute;
+        width: 28%;
+        // top: 27%;
+        top: 16vw;
+        right: 3.4%;
     }
     &_bubble {
         position: absolute;
@@ -342,6 +349,10 @@ main {
                 bottom: -2.5%;
             }
         }
+        &_girl {
+            top: 14vw;
+            right: 1%;
+        }
     }
     @media screen and (max-width: 450px) {
         padding: 67.78vw 0 73.15vw;
@@ -370,6 +381,11 @@ main {
                 right: -18.9%;
 
             }
+        }
+        &_girl {
+            width: 50%;
+            top: 21vw;
+            right: 3%;
         }
     }
 }
@@ -469,6 +485,8 @@ main {
         line-height: 1.6;
         margin-bottom: 20px;
         text-align: justify;
+        max-width: 645px;
+        width: 100%;
     }
     &_route {
         &_square {
@@ -523,6 +541,21 @@ main {
         width: 39.23%;
         right: -27%;
         bottom: -5%;
+        z-index: 1;
+    }
+    &_picname {
+        font-size: 13px;
+        color: #fff;
+        text-shadow: 0 0 5px rgba(0,0,0,0.5);
+        position: absolute;
+        right: 8%;
+        bottom: 10%;
+    }
+    &_geometry {
+        position: absolute;
+        width: 21%;
+        left: -2.4%;
+        bottom: -2.53%;
         z-index: 1;
     }
     @media screen and (max-width: 1399px) {
@@ -597,6 +630,16 @@ main {
                 transform: translateX(-40px);
             }
         }
+        &_picname {
+            right: 5%;
+            bottom: 20%;
+        }
+        &_geometry {
+            position: absolute;
+            width: 47.86%;
+            left: -7.1%;
+            bottom: 0;
+        }
     }
     @media screen and (max-width: 660px) {
         &_title {
@@ -625,6 +668,10 @@ main {
         }
     }
     @media screen and (max-width: 575px) {
+        >.container {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
         &_title {
             padding-left: 20px;
             &::before {
@@ -878,6 +925,13 @@ main {
         right: -23.6%;
         top: 0;
     }
+    &_gradient {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        transform: translateY(50%);
+    }
     @media screen and (max-width: 1500px) {
         &_bubble {
             display: none;
@@ -981,9 +1035,11 @@ main {
         &_row {
             >div {
                 padding: 0;
+                margin-top: -20px;
             }
             &_title {
                 font-size: 20px;
+                margin-bottom: 15px;
                 &::before {
                     width: 20px;
                     height: 20px;
@@ -993,10 +1049,10 @@ main {
         }
         &_industry {
             >p {
-                font-size: 16px;
+                font-size: 12px;
             }
             &-wrap {
-                padding: 0;
+                padding: 0 40px;
             }
         }
         &_company {
@@ -1005,20 +1061,32 @@ main {
                 margin-top: 0;
             }
             &_text {
-                font-size: 18px;
+                font-size: 12px;
                 width: calc(100% - 15px);
             }
             &_item {
-                margin-bottom: 20px;
-                padding: 10px 15px;
+                margin-bottom: 13px;
+                padding: 5px 15px;
             }
             &_triangle {
                 width: 5px;
                 margin-right: 10px;
             }
+            &-wrap {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
         }
         &_divide-m {
             margin: 30px 0;
+        }
+        &_title {
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 15px;
+        }
+        &_subtitle {
+            margin-bottom: 40px;
         }
     }
 }
@@ -1059,6 +1127,8 @@ main {
         background-color: #0075ce;
         // background: linear-gradient(to bottom, #0075ce 0%, #0075ce 85%, rgba(0, 117, 206, 0) 100%);
         z-index: 1;
+        position: relative;
+        z-index: 0;
         &_ch {
             font-size: 32px;
             font-family: $font-serif;
@@ -1100,15 +1170,34 @@ main {
             height: 100%;
         }
     }
+    &_gradient {
+        position: absolute;
+        width: 100%;
+        height: 3.6vw;
+        background: linear-gradient(to bottom, #0076d0 0%, #0076d0 30%, rgba(0, 118, 208, 0) 100%);
+        left: 0;
+        &_m {
+            position: absolute;
+            width: 100%;
+            height: 19vw;
+            background: linear-gradient(to bottom, #0076d0 0%, #0076d0 30%, rgba(0, 118, 208, 0) 100%);
+            top: -1vw;
+            left: 0;
+            top: 95%;
+        }
+    }
 }
 
 .core {
     padding: 235px 0 320px;
     position: relative;
+    >.container {
+        max-width: 1200px;
+    }
     &_title {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         &_ch {
-            padding-left: 55px;
+            padding-left: 48px;
             position: relative;
             margin-bottom: 10px;
             h2 {
@@ -1137,7 +1226,7 @@ main {
             transform: rotate(45deg);
         }
         &_en {
-            font-size: 36px;
+            font-size: 30px;
             color: $secondary-500;
             opacity: 0.21;
             font-family: $font-serif;
@@ -1146,10 +1235,10 @@ main {
         }
     }
     &_subtitle {
-        margin-bottom: 50px;
+        margin-bottom: 15px;
         h3 {
             color: #101d30;
-            font-size: 36px;
+            font-size: 30px;
             margin: 0;
             letter-spacing: 0.3em;
             font-weight: normal;
@@ -1160,11 +1249,11 @@ main {
         }
     }
     &_list {
-        margin-bottom: 95px;
+        margin-bottom: 20px;
         li {
             position: relative;
             padding-left: 30px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 300;
             letter-spacing: 0.2em;
             .highlight {
@@ -1281,7 +1370,7 @@ main {
     }
     &_geometry {
         position: absolute;
-        width: 20.85%;
+        width: 18.07%;
         top: -4.26%;
         right: -3.7%;
     }
@@ -1296,6 +1385,24 @@ main {
         width: 18.37%;
         right: -10.36%;
         bottom: 0;
+        &_2 {
+            position: absolute;
+            width: 4.81%;
+            right: 12.66%;
+            top: 17.44%;
+        }
+        &_3 {
+            position: absolute;
+            width: 43.63%;
+            left: -12.12%;
+            top: 0;
+        }
+        &_4 {
+            position: absolute;
+            width: 41.59%;
+            right: -9.83%;
+            bottom: 3%;
+        }
     }
     @media screen and (max-width: 1500px) {
         &_tree {
@@ -1308,9 +1415,13 @@ main {
                 align-items: center;
                 &_text {
                     margin-bottom: 50px;
+                    padding-left: 0;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     h4 {
                         font-size: 26px;
-                        // margin-bottom: 20px;
                         &::before {
                             height: 25px;
                             width: 3px;
@@ -1322,6 +1433,15 @@ main {
                     }
                     p {
                         font-size: 14px;
+                    }
+                    &::before, &::after {
+                        top: 17px;
+                    }
+                    &::before {
+                        width: 70px;
+                    }
+                    &::after {
+                        left: 50px;
                     }
                 }
             }
@@ -1466,13 +1586,13 @@ main {
     }
     @media screen and (max-width: 575px) {
         >.container {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         &_swiper {
             &_smallpic {
                 &_text {
-                    padding-left: 50px;
+                    // padding-left: 50px;
                     h4 {
                         font-size: 20px;
                         margin-bottom: 5px;
@@ -1498,6 +1618,18 @@ main {
             }
             &-prev {
                 right: 35px;
+            }
+        }
+        &_title {
+            &_ch {
+                h2 {
+                    font-size: 22px;
+                }
+            }
+        }
+        &_subtitle {
+            h3 {
+                font-size: 15px;
             }
         }
     }
@@ -1788,7 +1920,7 @@ main {
     }
     &_subtitle {
         font-size: 30px;
-        letter-spacing: 0.15em;
+        letter-spacing: 0.35em;
         .highlight {
             color: $primary-500;
         }
@@ -1902,11 +2034,16 @@ main {
             display: block;
         }
     }
+    @media screen and (max-width: 1120px) {
+        &_subtitle  {
+            letter-spacing: 0.33em;
+        }
+    }
     @media screen and (max-width: 767px) {
         >.container {
             padding-left: 20px;
             padding-right: 20px;
-            max-width: 320px;
+            max-width: 450px;
         }
         &_title {
             &_ch {
@@ -1971,6 +2108,21 @@ main {
                     }
                 }
             }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &_title {
+            &_ch {
+                h2 {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 400px) {
+        &_subtitle {
+            letter-spacing: 0.15em;
+            line-height: 1.5;
         }
     }
 }
@@ -2058,6 +2210,12 @@ main {
             bottom: 7%;
             right: -4.79%;
         }
+        &-3 {
+            position: absolute;
+            width: 60.85vw;
+            top: -1.5%;
+            right: -17.15%;
+        }
     }
     &_geometry {
         &-1 {
@@ -2101,6 +2259,22 @@ main {
                 top: 33px;
                 padding-right: 0;
                 padding-top: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        >.container {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        &_swiper {
+            &-pic {
+                &_item {
+                    >p {
+                        right: 10px;
+                        bottom: 10px;
+                    }
+                }
             }
         }
     }
@@ -2214,6 +2388,12 @@ main {
             width: 32.93%;
             top: 15%;
             left: -15.74%;
+        }
+        &_3 {
+            position: absolute;
+            width: 9.4%;
+            bottom: 7%;
+            right: 14.82%;
         }
     }
     &_geometry {
@@ -2339,6 +2519,16 @@ main {
             top: -14%;
             bottom: inherit;
             right: -35%;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &_swiper {
+            &_item {
+                >p {
+                    right: 10px;
+                    bottom: 10px;
+                }
+            }
         }
     }
     @media screen and (max-width: 450px) {
@@ -2475,6 +2665,12 @@ main {
             right: -12.59%;
             top: 11%;
         }
+        &_2 {
+            position: absolute;
+            width: 60.85vw;
+            bottom: 3.5%;
+            right: -18%;
+        }
     }
     &_geometry {
         position: absolute;
@@ -2524,6 +2720,16 @@ main {
             br {
                 display: block;
             }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        >.container {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .title-en {
+            font-size: 14px;
+            margin-left: 5px;
         }
     }
     @media screen and (max-width: 370px) {
@@ -2727,6 +2933,7 @@ main {
     } 
     &_form {
         width: 65%;
+        margin-left: auto;
         &_inner {
             max-width: 750px;
             padding-left: 20px;
@@ -2811,6 +3018,25 @@ main {
         width: 21%;
         top: -8%;
         right: -4.38%;
+        &-2 {
+            position: absolute;
+            width: 5.98%;
+            top: 75%;
+            left: 3%;
+        }
+        &-3 {
+            position: absolute;
+            width: 40.8%;
+            top: 2%;
+            left: -11%;
+        }
+    }
+    &_girl {
+        position: absolute;
+        width: 28%;
+        top: 42%;
+        left: 7%;
+        transform: scaleX(-1);
     }
     @media screen and (max-width: 991px) {
         &_pic {
@@ -2819,6 +3045,14 @@ main {
         }
         &_form {
             width: 100%;
+        }
+        &_girl {
+            position: absolute;
+            width: 44%;
+            top: 60vw;
+            left: inherit;
+            right: -1.5%;
+            transform: none;
         }
     }
     @media screen and (max-width: 767px) {
@@ -3078,6 +3312,49 @@ main {
             }
         }
     }
+    @media screen and (max-width: 575px) {
+        &_top {
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &_inform {
+            >ul {
+                >li {
+                    p {
+                        &.footer_inform {
+                            &_title {
+                                font-size: 14px;
+                                width: 90px;
+                                padding-left: 10px;
+                                &::before {
+                                    height: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &_content {
+                font-size: 14px;
+                width: calc(100% - 90px);
+                &_list {
+                    >span {
+                        &:last-child {
+                            font-size: 14px;
+                            margin: 0;
+                            transform: translateY(-2px);
+                        }
+                    }
+                }
+            }
+        }
+        &_geometry {
+            &-2 {
+                bottom: -13.5vw;
+            }
+        }
+    }
 }
 
 .sideBtn {
@@ -3190,5 +3467,31 @@ main {
                 opacity: 1;
             }
         }
+    }
+}
+
+.circle {
+    animation: float-vertical 3s ease-in-out infinite alternate;
+}
+
+.bubble {
+    animation: float-horizontal 3s ease-in-out infinite alternate;
+}
+
+@keyframes float-vertical {
+    0% {
+        transform: translateY(-8%);
+    }
+    100% {
+        transform: translateY(8%);
+    }
+}
+
+@keyframes float-horizontal {
+    0% {
+        transform: translateX(-8%);
+    }
+    100% {
+        transform: translateX(8%);
     }
 }

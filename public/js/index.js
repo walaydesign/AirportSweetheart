@@ -33,7 +33,7 @@ var swiperCore = new Swiper(".core_swiper", {
 var swiperSweetlife = new Swiper(".sweetlife_swiper", {
     slidesPerView: 1,
     spaceBetween: 20,
-    slidesPerGroup: 2,
+    slidesPerGroup: 1,
     navigation: {
         nextEl: ".core_swiper-next",
         prevEl: ".core_swiper-prev",
@@ -52,6 +52,7 @@ var swiperSweetlife = new Swiper(".sweetlife_swiper", {
     breakpoints: {
         992: {
             slidesPerView: 2,
+            slidesPerGroup: 2,
         }
     }
 })
