@@ -18,16 +18,11 @@ var swiperCore = new Swiper(".core_swiper", {
         prevEl: "#core_swiper-prev",
     },
     speed: 800,
-    // autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: false,
-    // },
     pagination: {
         el: "#core_swiper_pagination",
         clickable: true,
     },
     allowTouchMove: false,
-    // loop: true,
 })
 
 var swiperSweetlife = new Swiper(".sweetlife_swiper", {
@@ -39,16 +34,11 @@ var swiperSweetlife = new Swiper(".sweetlife_swiper", {
         prevEl: ".core_swiper-prev",
     },
     speed: 800,
-    // autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: false,
-    // },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
     allowTouchMove: false,
-    // loop: true,
     breakpoints: {
         992: {
             slidesPerView: 2,
@@ -74,7 +64,6 @@ var swiperSchoolText = new Swiper(".school_swiper-text", {
 var swiperSchoolPic = new Swiper(".school_swiper-pic", {
     slidesPerView: 1,
     speed: 800,
-    // allowTouchMove: false,
     navigation: {
         nextEl: "#school_swiper-next",
         prevEl: "#school_swiper-prev",
@@ -95,7 +84,6 @@ $(".school_tab_item").click(function(){
 var swiperGreen = new Swiper(".green_swiper", {
     slidesPerView: 1,
     speed: 800,
-    // allowTouchMove: false,
     navigation: {
         nextEl: "#green_swiper-next",
         prevEl: "#green_swiper-prev",
