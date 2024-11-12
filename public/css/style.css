@@ -90,6 +90,7 @@ main {
 .kv {
   padding: 13.07vw 0 10.1vw;
   position: relative;
+  z-index: 0;
 }
 
 .kv_logo {
@@ -266,6 +267,7 @@ main {
   width: 21.15%;
   bottom: -9.2%;
   left: -5.62%;
+  z-index: 1;
 }
 
 .kv_bubble_2 {
@@ -305,6 +307,9 @@ main {
 }
 
 @media screen and (max-width: 991px) {
+  .kv {
+    margin-bottom: 23.69vw;
+  }
   .kv_logo {
     width: 270px;
     margin-bottom: 25px;
@@ -366,6 +371,13 @@ main {
   }
   .kv_inform_price {
     padding-right: 15px;
+  }
+  .kv_inform_price .kv_inform_unit {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  .kv_inform_price .kv_inform_from {
+    bottom: 10px;
   }
 }
 
@@ -501,6 +513,8 @@ main {
   font-size: 29px;
   font-weight: 700;
   color: #e45d5c;
+  letter-spacing: 0.1em;
+  margin-left: 5px !important;
 }
 
 .airport_size_triangle {
@@ -527,6 +541,10 @@ main {
   margin: 0 10px;
 }
 
+.airport_size_head {
+  letter-spacing: 0.1em;
+}
+
 .airport_text {
   font-size: 20px;
   letter-spacing: 0.05em;
@@ -549,7 +567,7 @@ main {
   font-size: 26px;
   margin: 0;
   font-weight: 500;
-  line-height: 0.1em;
+  letter-spacing: 0.1em;
 }
 
 .airport_route_triangle {
@@ -633,13 +651,13 @@ main {
     font-size: 42px;
   }
   .airport_size {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    max-width: 480px;
+    width: 100%;
     margin-bottom: 20px;
   }
   .airport_size_head {
     position: relative;
+    margin-bottom: 5px;
   }
   .airport_size_head::after {
     position: absolute;
@@ -652,8 +670,19 @@ main {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
+  .airport_size_intro {
+    font-size: 26px;
+    letter-spacing: 0.22em;
+  }
+  .airport_size_dot {
+    margin-right: 13px;
+  }
   .airport_route_text {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .airport_text {
+    font-size: 18px;
+    max-width: 480px;
   }
 }
 
@@ -675,7 +704,7 @@ main {
 
 @media screen and (max-width: 991px) {
   .airport {
-    padding-top: 23.69vw;
+    padding-top: 0;
     padding-bottom: 107.55vw;
     background-image: url(../img/airport_bg_m.webp);
   }
@@ -785,27 +814,62 @@ main {
   }
   .airport_text {
     font-size: 15px;
+    max-width: 290px;
+  }
+  .airport_size {
+    max-width: 290px;
   }
   .airport_route_square {
-    width: 6px;
-    height: 6px;
-    margin-right: 5px;
+    width: 4px;
+    height: 4px;
+    margin-right: 3px;
   }
   .airport_route_text {
-    font-size: 13px;
+    font-size: 12px;
   }
   .airport_route_triangle {
     width: 4px;
-    margin: 0 5px;
+    margin: 0 4px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .airport_route_text {
+    letter-spacing: 0em;
+    font-size: 12px;
+  }
+  .airport_picname {
+    bottom: 15%;
   }
 }
 
 @media screen and (max-width: 360px) {
+  .airport > .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .airport_title {
+    padding-left: 10px;
+  }
   .airport_title_ch {
     font-size: 18px;
   }
   .airport_title::before {
     top: 2px;
+  }
+  .airport_title_en {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .airport_size_intro {
+    letter-spacing: 0.05em;
+    font-size: 15px;
+  }
+  .airport_size_intro .highlight {
+    font-size: 15px;
+  }
+  .airport_route_triangle {
+    margin: 0 2px;
   }
 }
 
@@ -1295,8 +1359,21 @@ main {
   margin-top: -2px;
 }
 
-.map_wrap > img {
+.map_wrap-wrap {
+  position: relative;
+}
+
+.map_wrap_pic {
   height: 100%;
+}
+
+.map_wrap_scroll {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  top: 5%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .map_gradient {
@@ -1403,6 +1480,7 @@ main {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 0.2em;
+  text-align: justify;
 }
 
 .core_list li .highlight {
@@ -1468,9 +1546,9 @@ main {
 }
 
 .core_swiper_smallpic_text {
-  padding-left: 100px;
   position: relative;
   margin-bottom: 75px;
+  text-align: right;
 }
 
 .core_swiper_smallpic_text h4 {
@@ -1479,6 +1557,10 @@ main {
   font-weight: 700;
   margin-bottom: 10px;
   letter-spacing: 0.13em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
 }
 
 .core_swiper_smallpic_text p {
@@ -1491,7 +1573,6 @@ main {
 .core_swiper_smallpic_text::before {
   position: absolute;
   content: "";
-  width: 90px;
   height: 3px;
   background-color: #217bad;
   left: -20px;
@@ -1509,6 +1590,30 @@ main {
   border-radius: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.core_swiper_smallpic_text.text-highspeed::before {
+  width: calc(100% - 235px);
+}
+
+.core_swiper_smallpic_text.text-highspeed::after {
+  left: calc(100% - 255px);
+}
+
+.core_swiper_smallpic_text.text-mrt::before {
+  width: calc(100% - 320px);
+}
+
+.core_swiper_smallpic_text.text-mrt::after {
+  left: calc(100% - 340px);
+}
+
+.core_swiper_smallpic_text.text-airport::before {
+  width: calc(100% - 280px);
+}
+
+.core_swiper_smallpic_text.text-airport::after {
+  left: calc(100% - 300px);
 }
 
 .core_swiper_smallpic_pic {
@@ -1604,12 +1709,12 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .core_swiper_smallpic_text h4 {
-    font-size: 26px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .core_swiper_smallpic_text h4::before {
     height: 25px;
@@ -1618,12 +1723,6 @@ main {
   .core_swiper_smallpic_text h4::after {
     height: 25px;
     width: 3px;
-  }
-  .core_swiper_smallpic_text p {
-    font-size: 14px;
-  }
-  .core_swiper_smallpic_text::before, .core_swiper_smallpic_text::after {
-    top: 17px;
   }
   .core_swiper_smallpic_text::before {
     width: 70px;
@@ -1676,11 +1775,18 @@ main {
   .core_swiper_smallpic_text::before {
     left: 0;
     width: 80px;
-    top: 15px;
   }
   .core_swiper_smallpic_text::after {
     left: 70px;
-    top: 15px;
+  }
+  .core_swiper_smallpic_text.text-highspeed::after {
+    left: calc(100% - 245px);
+  }
+  .core_swiper_smallpic_text.text-mrt::after {
+    left: calc(100% - 330px);
+  }
+  .core_swiper_smallpic_text.text-airport::after {
+    left: calc(100% - 290px);
   }
   .core_swiper_smallpic_pic {
     width: 50%;
@@ -1739,14 +1845,6 @@ main {
     height: 5px;
     top: 10px;
   }
-  .core_swiper_smallpic_text::before {
-    height: 1px;
-  }
-  .core_swiper_smallpic_text::after {
-    width: 5px;
-    height: 5px;
-    left: 80px;
-  }
   .core_swiper-wrap .swiper-arrow {
     bottom: inherit;
     top: calc(100% + 10px);
@@ -1766,7 +1864,7 @@ main {
     padding-right: 40px;
   }
   .core_swiper_smallpic_text h4 {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 5px;
   }
   .core_swiper_smallpic_text h4::before {
@@ -1779,12 +1877,31 @@ main {
     font-size: 12px;
   }
   .core_swiper_smallpic_text::before {
-    width: 30px;
+    top: 20px;
+    height: 2px;
   }
   .core_swiper_smallpic_text::after {
-    width: 5px;
-    height: 5px;
-    left: 30px;
+    width: 10px;
+    height: 10px;
+    top: 20px;
+  }
+  .core_swiper_smallpic_text.text-highspeed::before {
+    width: calc(100% - 190px);
+  }
+  .core_swiper_smallpic_text.text-highspeed::after {
+    left: calc(100% - 190px);
+  }
+  .core_swiper_smallpic_text.text-mrt::before {
+    width: calc(100% - 255px);
+  }
+  .core_swiper_smallpic_text.text-mrt::after {
+    left: calc(100% - 255px);
+  }
+  .core_swiper_smallpic_text.text-airport::before {
+    width: calc(100% - 223px);
+  }
+  .core_swiper_smallpic_text.text-airport::after {
+    left: calc(100% - 223px);
   }
   .core_swiper-prev {
     right: 35px;
@@ -1803,10 +1920,40 @@ main {
   }
   .core_swiper_smallpic_text h4 {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .core_swiper_smallpic_text p {
     font-size: 12px;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .core_swiper_smallpic_text::before {
+    top: 20px;
+    height: 1px;
+    top: 12px;
+  }
+  .core_swiper_smallpic_text::after {
+    width: 5px;
+    height: 5px;
+    top: 12px;
+  }
+  .core_swiper_smallpic_text.text-highspeed::before {
+    width: calc(100% - 117px);
+  }
+  .core_swiper_smallpic_text.text-highspeed::after {
+    left: calc(100% - 117px);
+  }
+  .core_swiper_smallpic_text.text-mrt::before {
+    width: calc(100% - 156px);
+  }
+  .core_swiper_smallpic_text.text-mrt::after {
+    left: calc(100% - 156px);
+  }
+  .core_swiper_smallpic_text.text-airport::before {
+    width: calc(100% - 137px);
+  }
+  .core_swiper_smallpic_text.text-airport::after {
+    left: calc(100% - 137px);
   }
   .core_swiper_smallpic_pic {
     width: 40%;
@@ -1817,18 +1964,22 @@ main {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
   .core {
     padding: 0;
   }
+  .core > .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .core_title_ch h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .core_title_en {
     font-size: 14px;
   }
   .core_subtitle h3 {
-    font-size: 14px;
+    font-size: 13px;
   }
   .core_list {
     margin-bottom: 25px;
@@ -2083,7 +2234,7 @@ main {
 
 .sweetlife_title_ch h2 {
   color: #00795a;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 500;
   margin: 0;
   letter-spacing: 0.2em;
@@ -2356,6 +2507,14 @@ main {
   position: relative;
 }
 
+.school > .container {
+  max-width: 1200px;
+}
+
+.school .sweetlife_text {
+  margin-bottom: 20px;
+}
+
 .school_swiper {
   position: relative;
 }
@@ -2388,7 +2547,7 @@ main {
 .school_swiper-pic_item {
   position: relative;
   width: 100%;
-  padding-bottom: 61%;
+  padding-bottom: 50%;
 }
 
 .school_swiper-pic_item-wrap {
@@ -2423,7 +2582,7 @@ main {
 }
 
 .school_swiper-pic_text {
-  margin-top: 45px;
+  margin-top: 25px;
   margin-bottom: 0;
   text-align: center;
   color: #00795a;
@@ -2526,12 +2685,16 @@ main {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
+  .school > .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .school .sweetlife_title_ch {
     padding-left: 20px;
   }
   .school .sweetlife_title_ch h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
   .school .sweetlife_title_square {
     margin: 0 10px 0 5px;
@@ -2544,7 +2707,7 @@ main {
 }
 
 .green_title {
-  margin-bottom: 115px;
+  margin-bottom: 50px;
 }
 
 .green_title_en {
@@ -3242,6 +3405,7 @@ main {
 .reserve {
   padding-bottom: 165px;
   position: relative;
+  z-index: 0;
 }
 
 .reserve_pic {
@@ -3398,6 +3562,7 @@ main {
   left: 7%;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
+  z-index: -1;
 }
 
 @media screen and (max-width: 991px) {

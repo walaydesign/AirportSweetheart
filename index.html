@@ -27,8 +27,8 @@
 
     <main>
         <div class="kv">
-            <img class="kv_geometry kv_geometry_1" src="./public/img/kv_geometry_3.svg" alt="">
             <img class="kv_girl" src="./public/img/girl.gif" alt="">
+            <img class="kv_geometry kv_geometry_1" src="./public/img/kv_geometry_3.svg" alt="">
             <img class="kv_geometry kv_geometry_2 circle" src="./public/img/kv_geometry_2.svg" alt="">
             <img class="kv_bubble kv_bubble_1 d-sm-block d-none bubble" src="./public/img/kv_bubble_1.png" alt="">
             <img class="kv_bubble kv_bubble_2 d-sm-block d-none bubble" src="./public/img/kv_bubble_2.png" alt="">
@@ -89,7 +89,7 @@
                             <div class="d-flex align-items-center">
                                 <h4 class="airport_size_intro">全台最大開發計畫</h4>
                                 <div class="airport_size_dot"></div>
-                                <h4 class="airport_size_intro pb-1">約<span class="highlight">青埔9倍大</span></h4>
+                                <h4 class="airport_size_intro pb-sm-1">約<span class="highlight">青埔9倍大</span></h4>
                             </div>
                         </div>
                         <p class="airport_text">
@@ -264,8 +264,11 @@
                 <div class="map_gradient_m"></div>
             </div>
             <img class="w-100 d-lg-block d-none" src="./public/img/scenary.webp" alt="">
-            <div class="map_wrap d-lg-none">
-                <img src="./public/img/scenary_m.webp" alt="">
+            <div class="map_wrap-wrap">
+                <div class="map_wrap d-lg-none">
+                    <img class="map_wrap_pic" src="./public/img/scenary_m.webp" alt="">
+                </div>
+                <img class="map_wrap_scroll" src="./public/img/scroll.svg" alt="">
             </div>
             <img class="map_bubble map_bubble-1 d-lg-block d-none bubble" src="./public/img/scenary_bubble_1.png" alt="">
             <img class="map_bubble map_bubble-2 d-lg-block d-none bubble" src="./public/img/scenary_bubble_2.png" alt="">
@@ -306,7 +309,7 @@
                                         <p class="core_swiper_pic_text">實景圖</p>
                                     </div>
                                     <div class="core_swiper_smallpic">
-                                        <div class="core_swiper_smallpic_text">
+                                        <div class="core_swiper_smallpic_text text-highspeed">
                                             <h4>高鐵桃園站</h4>
                                             <p>
                                                 Taoyuan HSR Station
@@ -326,7 +329,7 @@
                                         <p class="core_swiper_pic_text">實景圖</p>
                                     </div>
                                     <div class="core_swiper_smallpic">
-                                        <div class="core_swiper_smallpic_text hall">
+                                        <div class="core_swiper_smallpic_text hall text-mrt">
                                             <h4>機場捷運A15站</h4>
                                             <p>
                                                 Taoyuan Airport MRT
@@ -346,7 +349,7 @@
                                         <p class="core_swiper_pic_text">實景圖</p>
                                     </div>
                                     <div class="core_swiper_smallpic">
-                                        <div class="core_swiper_smallpic_text">
+                                        <div class="core_swiper_smallpic_text text-airport">
                                             <h4>桃園國際機場</h4>
                                             <p>
                                                 Taiwan Taoyuan International Airport
@@ -476,7 +479,7 @@
 
         <div class="school">
             <img class="w-100 d-lg-none mb-5" src="./public/img/school_deco.png" alt="">
-            <img class="school_bubble-3 bubble" src="./public/img/school_bubble_2.png" alt="">
+            <img class="school_bubble-3 bubble d-lg-none" src="./public/img/school_bubble_2.png" alt="">
             <div class="container" data-aos="fade-up" data-aos-duration="800">
                 <div class="sweetlife_title_ch d-flex align-items-center">
                     <h2>校園為鄰</h2>
@@ -484,7 +487,7 @@
                     <h2>漫步上學趣</h2>
                 </div>
                 <p class="sweetlife_text">
-                    清晨的陽光灑在校園旁的小路上，牽著孩子的小手，<br>
+                    清晨的陽光灑在校園旁的小路上，牽著孩子的小手，<br class="d-sm-block d-none">
                     笑聲隨著微風飄散。短短幾分鐘的步行路程，成了親子間最溫馨的時光。
                 </p>
                 <div class="d-flex align-items-start school_swiper">
@@ -609,7 +612,7 @@
             <img class="green_bubble-2 d-lg-none bubble" src="./public/img/green_bubble_m.png" alt="">
 
             <img class="w-100 d-lg-none mb-4 circle" src="./public/img/green_geometry_2.png" alt="">
-            <img class="green_bubble_3 bubble" src="./public/img/green_bubble_2.png" alt="">
+            <img class="green_bubble_3 bubble d-lg-none" src="./public/img/green_bubble_2.png" alt="">
         </div>
 
         <div class="building" id="building">
@@ -720,8 +723,6 @@
             <img class="d-lg-none w-100" src="./public/img/school_deco.png" alt="">
             <img class="building_bubble_2 bubble d-lg-none" src="./public/img/building_bubble_2.png" alt="">
         </div>
-
-        
 
         <div class="arrange" id="arrange">
             <div class="container">
@@ -836,15 +837,15 @@
                         <form onsubmit="sendEmail(); reset(); return false">
                             <div class="reserve_form_item">
                                 <label for="">姓名:</label>
-                                <input type="text" class="reserve_form_input" id="name">
+                                <input type="text" class="reserve_form_input" id="name" required>
                             </div>
                             <div class="reserve_form_item">
                                 <label for="">電話:</label>
-                                <input type="phone" class="reserve_form_input" id="phone">
+                                <input type="phone" class="reserve_form_input" id="phone" required>
                             </div>
                             <div class="reserve_form_item">
                                 <label for="">需求房型:</label>
-                                <select name="" class="reserve_form_input select" id="type">
+                                <select name="" class="reserve_form_input select" id="type" required>
                                     <option value="1房">1房</option>
                                     <option value="2房">2房</option>
                                     <option value="3房">3房</option>

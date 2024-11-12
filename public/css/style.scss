@@ -88,6 +88,7 @@ main {
 .kv {
     padding: 13.07vw 0 10.1vw;
     position: relative;
+    z-index: 0;
     &_logo {
         display: block;
         // width: 36vw;
@@ -228,6 +229,7 @@ main {
             width: 21.15%;
             bottom: -9.2%;
             left: -5.62%;
+            z-index: 1;
         }
         &_2 {
             width: 7.96%;
@@ -266,6 +268,7 @@ main {
         }
     }
     @media screen and (max-width: 991px) {
+        margin-bottom: 23.69vw;
         &_logo {
             width: 270px;
             margin-bottom: 25px;
@@ -331,6 +334,12 @@ main {
             }
             &_price {
                 padding-right: 15px;
+                .kv_inform_unit {
+                    transform: translateY(2px);
+                }
+                .kv_inform_from {
+                    bottom: 10px;
+                }
             }
         }
     }
@@ -456,6 +465,8 @@ main {
             font-size: 29px;
             font-weight: 700;
             color: $third-500;
+            letter-spacing: 0.1em;
+            margin-left: 5px !important;
         }
         &_triangle {
             width: 6px;
@@ -476,6 +487,9 @@ main {
             border-radius: 50%;
             background-color: #000;
             margin: 0 10px;
+        }
+        &_head {
+            letter-spacing: 0.1em;
         }
     }
     &_text {
@@ -499,7 +513,7 @@ main {
             font-size: 26px;
             margin: 0;
             font-weight: 500;
-            line-height: 0.1em;
+            letter-spacing: 0.1em;
         }
         &_triangle {
             width: 13px;
@@ -573,11 +587,13 @@ main {
             }
         }
         &_size {
-            width: fit-content;
+            max-width: 480px;
+            width: 100%;
             margin-bottom: 20px;
             &_head {
                 position: relative;
                 // width: fit-content;
+                margin-bottom: 5px;
                 &::after {
                     position: absolute;
                     content: "";
@@ -589,11 +605,22 @@ main {
                     transform: translateY(-50%);
                 }
             }
+            &_intro {
+                font-size: 26px;
+                letter-spacing: 0.22em;
+            }
+            &_dot {
+                margin-right: 13px;
+            }
         }
         &_route {
             &_text {
-                font-size: 20px;
+                font-size: 18px;
             }
+        }
+        &_text {
+            font-size: 18px;
+            max-width: 480px;
         }
     }
     @media screen and (max-width: 1199px) {
@@ -610,7 +637,7 @@ main {
         }
     }
     @media screen and (max-width: 991px) {
-        padding-top: 23.69vw;
+        padding-top: 0;
         padding-bottom: 107.55vw;
         background-image: url(../img/airport_bg_m.webp);
         >.container {
@@ -719,29 +746,66 @@ main {
         }
         &_text {
             font-size: 15px;
+            max-width: 290px;
+        }
+        &_size {
+            max-width: 290px;
         }
         &_route {
             &_square {
-                width: 6px;
-                height: 6px;
-                margin-right: 5px;
+                width: 4px;
+                height: 4px;
+                margin-right: 3px;
             }
             &_text {
-                font-size: 13px;
+                font-size: 12px;
             }
             &_triangle {
                 width: 4px;
-                margin: 0 5px;
+                margin: 0 4px;
             }
         }
     }
+    @media screen and (max-width: 400px) {
+        &_route {
+            &_text {
+                letter-spacing: 0em;
+                font-size: 12px;
+            }
+        }
+        &_picname {
+            bottom: 15%;
+        }
+    }
     @media screen and (max-width: 360px) {
+        >.container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
         &_title {
+            padding-left: 10px;
             &_ch {
                 font-size: 18px;
             }
             &::before {
                 top: 2px;
+            }
+            &_en {
+                transform: none;
+            }
+        }
+        &_size {
+            &_intro {
+                letter-spacing: 0.05em;
+                font-size: 15px;
+                 .highlight {
+                    font-size: 15px;
+                }
+            }
+        }
+        &_route {
+            &_triangle {
+                margin: 0 2px;
             }
         }
     }
@@ -1165,9 +1229,18 @@ main {
         height: 600px;
         overflow-x: auto;
         margin-top: -2px;
-        // z-index: -1;
-        >img {
+        &-wrap {
+            position: relative;
+        }
+        &_pic {
             height: 100%;
+        }
+        &_scroll {
+            position: absolute;
+            width: 90%;
+            left: 50%;
+            top: 5%;
+            transform: translateX(-50%);
         }
     }
     &_gradient {
@@ -1256,6 +1329,7 @@ main {
             font-size: 18px;
             font-weight: 300;
             letter-spacing: 0.2em;
+            text-align: justify;
             .highlight {
                 color: $secondary-500;
                 font-weight: 700;
@@ -1307,15 +1381,18 @@ main {
             // align-items: center;
             flex-direction: column;
             &_text {
-                padding-left: 100px;
+                // padding-left: 100px;
                 position: relative;
                 margin-bottom: 75px;
+                text-align: right;
                 h4 {
                     font-size: 38px;
                     color: $primary-500;
                     font-weight: 700;
                     margin-bottom: 10px;
                     letter-spacing: 0.13em;
+                    width: fit-content;
+                    margin-left: auto;
                 }
                 p {
                     font-size: 15px;
@@ -1326,7 +1403,7 @@ main {
                 &::before {
                     position: absolute;
                     content: "";
-                    width: 90px;
+                    // width: 90px;
                     height: 3px;
                     background-color: $primary-500;
                     left: -20px;
@@ -1342,6 +1419,32 @@ main {
                     top: 25px;
                     border-radius: 50%;
                     transform: translateY(-50%);
+                }
+                &.text {
+                    &-highspeed {
+                        &::before {
+                            width: calc(100% - 235px);
+                        }
+                        &::after {
+                            left: calc(100% - 255px);
+                        }
+                    }
+                    &-mrt {
+                        &::before {
+                            width: calc(100% - 320px);
+                        }
+                        &::after {
+                            left: calc(100% - 340px);
+                        }
+                    }
+                    &-airport {
+                        &::before {
+                            width: calc(100% - 280px);
+                        }
+                        &::after {
+                            left: calc(100% - 300px);
+                        }
+                    }
                 }
             }
             &_pic {
@@ -1419,9 +1522,9 @@ main {
                     width: 100%;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+                    align-items: flex-end;
+                    justify-content: flex-end;
                     h4 {
-                        font-size: 26px;
                         &::before {
                             height: 25px;
                             width: 3px;
@@ -1431,11 +1534,8 @@ main {
                             width: 3px;
                         }
                     }
-                    p {
-                        font-size: 14px;
-                    }
                     &::before, &::after {
-                        top: 17px;
+                        // top: 17px;
                     }
                     &::before {
                         width: 70px;
@@ -1472,26 +1572,33 @@ main {
                 padding: 0;
                 order: 1;
                 &_text {
-                    // width: 50%;
                     order: 2;
-                    // margin: 0 auto;
-                    // padding: 0 15px;
-                    // &.hall {
-                    //     width: 50%;
-                    //     p {
-                    //         width: fit-content;
-                    //         margin: 0 auto;
-                    //     }
-                    // }
                     margin: 0;
                     &::before {
                         left: 0;
                         width: 80px;
-                        top: 15px;
+                        // top: 24px;
                     }
                     &::after {
                         left: 70px;
-                        top: 15px;
+                        // top: 24px;
+                    }
+                    &.text {
+                        &-highspeed {
+                            &::after {
+                                left: calc(100% - 245px);
+                            }
+                        }
+                        &-mrt {
+                            &::after {
+                                left: calc(100% - 330px);
+                            }
+                        }
+                        &-airport {
+                            &::after {
+                                left: calc(100% - 290px);
+                            }
+                        }
                     }
                 }
                 &_pic {
@@ -1551,22 +1658,6 @@ main {
         &_swiper {
             &_smallpic {
                 &_text {
-                    // h4 {
-                    //     font-size: 22px;
-                    //     letter-spacing: 0.05em;
-                    //     padding: 0 10px;
-                    // }
-                    // p {
-                    //     width: 100%;
-                    // }
-                    &::before {
-                        height: 1px;
-                    }
-                    &::after {
-                        width: 5px;
-                        height: 5px;
-                        left: 80px;
-                    }
                 }
             }
             &-wrap {
@@ -1592,9 +1683,8 @@ main {
         &_swiper {
             &_smallpic {
                 &_text {
-                    // padding-left: 50px;
                     h4 {
-                        font-size: 20px;
+                        font-size: 30px;
                         margin-bottom: 5px;
                         &::before {
                             height: 22px;
@@ -1607,12 +1697,39 @@ main {
                         font-size: 12px;
                     }
                     &::before {
-                        width: 30px;
+                        top: 20px;
+                        height: 2px;
                     }
                     &::after {
-                        width: 5px;
-                        height: 5px;
-                        left: 30px;
+                        width: 10px;
+                        height: 10px;
+                        top: 20px;
+                    }
+                    &.text {
+                        &-highspeed {
+                            &::before {
+                                width: calc(100% - 190px);
+                            }
+                            &::after {
+                                left: calc(100% - 190px);
+                            }
+                        }
+                        &-mrt {
+                            &::before {
+                                width: calc(100% - 255px);
+                            }
+                            &::after {
+                                left: calc(100% - 255px);
+                            }
+                        }
+                        &-airport {
+                            &::before {
+                                width: calc(100% - 223px);
+                            }
+                            &::after {
+                                left: calc(100% - 223px);
+                            }
+                        }
                     }
                 }
             }
@@ -1641,11 +1758,49 @@ main {
                     h4 {
                         // font-size: 20px;
                         font-size: 18px;
-                        margin-bottom: 10px;
+                        margin-bottom: 5px;
                     }
                     p {
                         font-size: 12px;
                         // width: 70%;
+                        margin: 0;
+                        line-height: 1.2;
+                    }
+                    &::before {
+                        top: 20px;
+                        height: 1px;
+                        top: 12px;
+                    }
+                    &::after {
+                        width: 5px;
+                        height: 5px;
+                        top: 12px;
+                    }
+                    &.text {
+                        &-highspeed {
+                            &::before {
+                                width: calc(100% - 117px);
+                            }
+                            &::after {
+                                left: calc(100% - 117px);
+                            }
+                        }
+                        &-mrt {
+                            &::before {
+                                width: calc(100% - 156px);
+                            }
+                            &::after {
+                                left: calc(100% - 156px);
+                            }
+                        }
+                        &-airport {
+                            &::before {
+                                width: calc(100% - 137px);
+                            }
+                            &::after {
+                                left: calc(100% - 137px);
+                            }
+                        }
                     }
                 }
                 &_pic {
@@ -1658,12 +1813,16 @@ main {
             }
         }
     }
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 370px) {
         padding: 0;
+        >.container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
         &_title {
             &_ch {
                 h2 {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
             &_en {
@@ -1672,7 +1831,7 @@ main {
         }
         &_subtitle {
             h3 {
-                font-size: 14px;
+                font-size: 13px;
             }
         }
         &_list {
@@ -1885,7 +2044,7 @@ main {
             margin-bottom: 20px;
             h2 {
                 color: $secondary-500;
-                font-size: 48px;
+                font-size: 40px;
                 font-weight: 500;
                 margin: 0;
                 letter-spacing: 0.2em;
@@ -2130,6 +2289,12 @@ main {
 .school {
     padding-bottom: 288px;
     position: relative;
+    >.container {
+        max-width: 1200px;
+    }
+    .sweetlife_text {
+        margin-bottom: 20px;
+    }
     &_swiper {
         position: relative;
         &-text {
@@ -2153,7 +2318,7 @@ main {
             &_item {
                 position: relative;
                 width: 100%;
-                padding-bottom: 61%;
+                padding-bottom: 50%;
                 &-wrap {
                     display: flex;
                     flex-direction: column;
@@ -2178,7 +2343,7 @@ main {
                 }
             }
             &_text {
-                margin-top: 45px;
+                margin-top: 25px;
                 margin-bottom: 0;
                 text-align: center;
                 color: $secondary-500;
@@ -2278,11 +2443,15 @@ main {
             }
         }
     }
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 370px) {
+        >.container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
         .sweetlife_title_ch {
             padding-left: 20px;
             h2 {
-                font-size: 22px;
+                font-size: 20px;
             }
         }  
         .sweetlife_title_square {
@@ -2295,7 +2464,7 @@ main {
     padding-bottom: 267px;
     position: relative;
     &_title {
-        margin-bottom: 115px;
+        margin-bottom: 50px;
         &_en {
             padding-left: 55px;
             color: $secondary-500 !important;
@@ -2925,6 +3094,7 @@ main {
 .reserve {
     padding-bottom: 165px;
     position: relative;
+    z-index: 0;
     &_pic {
         width: 35%;
         >img {
@@ -3037,6 +3207,7 @@ main {
         top: 42%;
         left: 7%;
         transform: scaleX(-1);
+        z-index: -1;
     }
     @media screen and (max-width: 991px) {
         &_pic {

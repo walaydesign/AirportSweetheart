@@ -170,3 +170,7 @@ function sendEmail(){
         message => alert("感謝您的來信！我們很快就會和您聯繫！"),
     );
 }
+
+$(".map_wrap").on("scroll", function() {
+    $(".map_wrap_scroll").fadeOut(300);
+})
