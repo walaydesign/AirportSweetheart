@@ -645,7 +645,8 @@ main {
             padding-right: 20px;
         }
         &_title {
-            width: calc(100% * 10 / 12);
+            // width: calc(100% * 10 / 12);
+            width: fit-content;
             margin-left: auto;
             margin-right: auto;
             &::before {
@@ -667,10 +668,15 @@ main {
             left: -7.1%;
             bottom: 0;
         }
+        &_size, &_text, &_route {
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     @media screen and (max-width: 660px) {
         &_title {
-            width: 100%;
+            // width: 100%;
         }
         &_main {
             width: 100%;
@@ -807,6 +813,9 @@ main {
             &_triangle {
                 margin: 0 2px;
             }
+        }
+        &_text {
+            max-width: 228px;
         }
     }
 }
@@ -1157,6 +1166,7 @@ main {
 
 .map {
     position: relative;
+    z-index: 0;
     &_bubble {
         position: absolute;
         &-1 {
@@ -1237,10 +1247,11 @@ main {
         }
         &_scroll {
             position: absolute;
-            width: 90%;
+            width: 30%;
             left: 50%;
-            top: 5%;
+            top: 0;
             transform: translateX(-50%);
+            z-index: 5;
         }
     }
     &_gradient {
@@ -1257,6 +1268,32 @@ main {
             top: -1vw;
             left: 0;
             top: 95%;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &_title {
+            padding-bottom: 50px;
+        }   
+        &_gradient {
+            height: 8vw;
+            top: calc(315px - 2vw);
+            z-index: 1;
+            // transform: translateY(-50%);
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &_wrap {
+            &_scroll {
+                width: 50%;
+            }
+        }
+    }
+    @media screen and (max-width: 450px) {
+        &_wrap {
+            &_scroll {
+                width: 90%;
+                top: 5%;
+            }   
         }
     }
 }
@@ -1735,6 +1772,11 @@ main {
             }
             &-prev {
                 right: 35px;
+            }
+            &_pic {
+                &_text {
+                    font-size: 12px;
+                }
             }
         }
         &_title {
@@ -2277,6 +2319,13 @@ main {
                 }
             }
         }
+        &_swiper {
+            &_pic {
+                >p {
+                    font-size: 12px;
+                }
+            }
+        }
     }
     @media screen and (max-width: 400px) {
         &_subtitle {
@@ -2438,6 +2487,7 @@ main {
                     >p {
                         right: 10px;
                         bottom: 10px;
+                        font-size: 12px;
                     }
                 }
             }
@@ -2696,6 +2746,7 @@ main {
                 >p {
                     right: 10px;
                     bottom: 10px;
+                    font-size: 12px;
                 }
             }
         }

@@ -713,7 +713,9 @@ main {
     padding-right: 20px;
   }
   .airport_title {
-    width: calc(100% * 10 / 12);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
   }
@@ -737,12 +739,16 @@ main {
     left: -7.1%;
     bottom: 0;
   }
+  .airport_size, .airport_text, .airport_route {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (max-width: 660px) {
-  .airport_title {
-    width: 100%;
-  }
   .airport_main {
     width: 100%;
   }
@@ -870,6 +876,9 @@ main {
   }
   .airport_route_triangle {
     margin: 0 2px;
+  }
+  .airport_text {
+    max-width: 228px;
   }
 }
 
@@ -1269,6 +1278,7 @@ main {
 
 .map {
   position: relative;
+  z-index: 0;
 }
 
 .map_bubble {
@@ -1369,11 +1379,12 @@ main {
 
 .map_wrap_scroll {
   position: absolute;
-  width: 90%;
+  width: 30%;
   left: 50%;
-  top: 5%;
+  top: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  z-index: 5;
 }
 
 .map_gradient {
@@ -1394,6 +1405,30 @@ main {
   top: -1vw;
   left: 0;
   top: 95%;
+}
+
+@media screen and (max-width: 991px) {
+  .map_title {
+    padding-bottom: 50px;
+  }
+  .map_gradient {
+    height: 8vw;
+    top: calc(315px - 2vw);
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .map_wrap_scroll {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .map_wrap_scroll {
+    width: 90%;
+    top: 5%;
+  }
 }
 
 .core {
@@ -1905,6 +1940,9 @@ main {
   }
   .core_swiper-prev {
     right: 35px;
+  }
+  .core_swiper_pic_text {
+    font-size: 12px;
   }
   .core_title_ch h2 {
     font-size: 22px;
@@ -2493,6 +2531,9 @@ main {
   .sweetlife_title_ch h2 {
     font-size: 22px;
   }
+  .sweetlife_swiper_pic > p {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -2682,6 +2723,7 @@ main {
   .school_swiper-pic_item > p {
     right: 10px;
     bottom: 10px;
+    font-size: 12px;
   }
 }
 
@@ -2963,6 +3005,7 @@ main {
   .green_swiper_item > p {
     right: 10px;
     bottom: 10px;
+    font-size: 12px;
   }
 }
 
