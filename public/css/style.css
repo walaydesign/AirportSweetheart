@@ -91,6 +91,7 @@ main {
   padding: 13.07vw 0 10.1vw;
   position: relative;
   z-index: 0;
+  margin-bottom: 8vw;
 }
 
 .kv_logo {
@@ -435,7 +436,6 @@ main {
 }
 
 .airport {
-  padding-top: 8vw;
   padding-bottom: 44.38vw;
   background-image: url(../img/airport_bg.webp);
   background-size: 100%;
@@ -1289,6 +1289,7 @@ main {
   width: 16.48%;
   top: -12.58%;
   right: -8%;
+  z-index: 1;
 }
 
 .map_bubble-2 {
@@ -1394,6 +1395,7 @@ main {
   background: -webkit-gradient(linear, left top, left bottom, from(#0076d0), color-stop(30%, #0076d0), to(rgba(0, 118, 208, 0)));
   background: linear-gradient(to bottom, #0076d0 0%, #0076d0 30%, rgba(0, 118, 208, 0) 100%);
   left: 0;
+  top: 0;
 }
 
 .map_gradient_m {
@@ -1552,6 +1554,13 @@ main {
   bottom: 10px;
 }
 
+.core_swiper_pic_text-svg {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 35px;
+}
+
 .core_swiper_bigpic {
   width: 67%;
   padding-bottom: calc(67% * 0.6);
@@ -1657,7 +1666,7 @@ main {
   position: relative;
 }
 
-.core_swiper_smallpic_pic > img {
+.core_swiper_smallpic_pic_main {
   position: absolute;
   width: 100%;
   height: 100%;

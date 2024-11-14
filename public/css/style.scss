@@ -89,6 +89,7 @@ main {
     padding: 13.07vw 0 10.1vw;
     position: relative;
     z-index: 0;
+    margin-bottom: 8vw;
     &_logo {
         display: block;
         // width: 36vw;
@@ -400,7 +401,7 @@ main {
 }
 
 .airport {
-    padding-top: 8vw;
+    // padding-top: 8vw;
     padding-bottom: 44.38vw;
     background-image: url(../img/airport_bg.webp);
     background-size: 100%;
@@ -1173,6 +1174,7 @@ main {
             width: 16.48%;
             top: -12.58%;
             right: -8%;
+            z-index: 1;
         }
         &-2 {
             width: 10.91%;
@@ -1260,6 +1262,7 @@ main {
         height: 3.6vw;
         background: linear-gradient(to bottom, #0076d0 0%, #0076d0 30%, rgba(0, 118, 208, 0) 100%);
         left: 0;
+        top: 0;
         &_m {
             position: absolute;
             width: 100%;
@@ -1396,6 +1399,14 @@ main {
                 margin: 0;
                 right: 10px;
                 bottom: 10px;
+                // box-shadow: 0 0 3px #000;
+                &-svg {
+                    // filter: drop-shadow(0 0 3px #000);
+                    position: absolute;
+                    right: 10px;
+                    bottom: 10px;
+                    width: 35px;
+                }
             }
         }
         &_bigpic {
@@ -1488,7 +1499,7 @@ main {
                 width: 100%;
                 padding-bottom: 60%;
                 position: relative;
-                >img {
+                &_main {
                     position: absolute;
                     width: 100%;
                     height: 100%;
@@ -1768,6 +1779,9 @@ main {
                             }
                         }
                     }
+                }
+                &_pic {
+
                 }
             }
             &-prev {

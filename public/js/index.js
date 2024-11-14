@@ -174,3 +174,18 @@ function sendEmail(){
 $(".map_wrap").on("scroll", function() {
     $(".map_wrap_scroll").fadeOut(300);
 })
+
+$(window).on("resize", function() {
+    mapResize();
+})
+mapResize();
+
+function mapResize() {
+    if($(window).width() <= 991) {
+        let mapWidth = $(".map_wrap_pic").height() * 1.79;
+        let windowWidth = $(window).width();
+        let mapX = (mapWidth - windowWidth ) / 2;
+        $(".map_wrap").animate({scrollLeft: mapX});
+        console.log("mapWidth=" + mapWidth + ",windowWidth=" + windowWidth + ",mapX=" + mapX)
+    }
+}
