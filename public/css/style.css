@@ -215,7 +215,7 @@ main {
   border-radius: 50%;
   padding-bottom: 3px;
   position: absolute;
-  bottom: 28px;
+  bottom: 31px;
   right: 5px;
 }
 
@@ -378,7 +378,7 @@ main {
             transform: translateY(2px);
   }
   .kv_inform_price .kv_inform_from {
-    bottom: 10px;
+    bottom: 11px;
   }
 }
 
@@ -1378,11 +1378,17 @@ main {
   height: 100%;
 }
 
+.map_wrap_pic-pic {
+  width: 100%;
+  overflow-x: auto;
+  height: 100%;
+}
+
 .map_wrap_scroll {
   position: absolute;
   width: 30%;
   left: 50%;
-  top: 0;
+  top: -4%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 5;
@@ -1429,7 +1435,7 @@ main {
 @media screen and (max-width: 450px) {
   .map_wrap_scroll {
     width: 90%;
-    top: 5%;
+    top: -4%;
   }
 }
 
@@ -1815,6 +1821,7 @@ main {
         -ms-flex-order: 2;
             order: 2;
     margin: 0;
+    width: 40%;
   }
   .core_swiper_smallpic_text::before {
     left: 0;
@@ -1833,8 +1840,8 @@ main {
     left: calc(100% - 290px);
   }
   .core_swiper_smallpic_pic {
-    width: 50%;
-    padding-bottom: calc(50% * 0.6);
+    width: 60%;
+    padding-bottom: calc(60% * 0.64);
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;

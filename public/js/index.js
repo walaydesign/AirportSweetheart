@@ -172,7 +172,11 @@ function sendEmail(){
 }
 
 $(".map_wrap").on("scroll", function() {
-    $(".map_wrap_scroll").fadeOut(300);
+    // if($(window).width() <= 991 && $(".map_wrap_scroll").hasClass("mapX")) {
+        // $(".map_wrap_scroll").fadeOut(300);
+    // }
+    // console.log("i am scrolling!");
+    // $(".map_wrap_scroll").fadeOut(300);
 })
 
 $(window).on("resize", function() {
@@ -186,6 +190,8 @@ function mapResize() {
         let windowWidth = $(window).width();
         let mapX = (mapWidth - windowWidth ) / 2;
         $(".map_wrap").animate({scrollLeft: mapX});
-        console.log("mapWidth=" + mapWidth + ",windowWidth=" + windowWidth + ",mapX=" + mapX)
+        // $(".map_wrap_scroll").fadeIn(300).addClass("mapX");
+        // console.log("i am resizing!");
+        // $(".map_wrap_scroll").delay(300).addClass("mapX");
     }
 }

@@ -186,7 +186,7 @@ main {
             border-radius: 50%;
             padding-bottom: 3px;
             position: absolute;
-            bottom: 28px;
+            bottom: 31px;
             right: 5px;
         }
         &_price {
@@ -339,7 +339,7 @@ main {
                     transform: translateY(2px);
                 }
                 .kv_inform_from {
-                    bottom: 10px;
+                    bottom: 11px;
                 }
             }
         }
@@ -1246,12 +1246,17 @@ main {
         }
         &_pic {
             height: 100%;
+            &-pic {
+                width: 100%;
+                overflow-x: auto;
+                height: 100%;
+            }
         }
         &_scroll {
             position: absolute;
             width: 30%;
             left: 50%;
-            top: 0;
+            top: -4%;
             transform: translateX(-50%);
             z-index: 5;
         }
@@ -1295,7 +1300,7 @@ main {
         &_wrap {
             &_scroll {
                 width: 90%;
-                top: 5%;
+                top: -4%;
             }   
         }
     }
@@ -1622,6 +1627,7 @@ main {
                 &_text {
                     order: 2;
                     margin: 0;
+                    width: 40%;
                     &::before {
                         left: 0;
                         width: 80px;
@@ -1650,8 +1656,8 @@ main {
                     }
                 }
                 &_pic {
-                    width: 50%;
-                    padding-bottom: calc(50% * 0.6);
+                    width: 60%;
+                    padding-bottom: calc(60% * 0.64);
                     order: 1;
                 }
             }
