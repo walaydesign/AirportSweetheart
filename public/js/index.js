@@ -159,7 +159,7 @@ var swiperArrangeText = new Swiper(".arrange_swiper-text", {
 function sendEmail(){
     Email.send({
         SecureToken: "8207c7d7-4a6c-4797-870d-d16ee71023ce",
-        To : "zhulixdesign@gmail.com, zhuli705098@gmail.com",
+        To : "zhulixdesign@gmail.com, zhuli705098@gmail.com, a3202443aa@yahoo.com.tw, dtweryd@gmail.com",
         From : "walayydesign@gmail.com",
         Subject : "航綻甜心預約賞屋",
         Body : "姓名:" + document.getElementById("name").value
@@ -190,8 +190,5 @@ function mapResize() {
         let windowWidth = $(window).width();
         let mapX = (mapWidth - windowWidth ) / 2;
         $(".map_wrap").animate({scrollLeft: mapX});
-        // $(".map_wrap_scroll").fadeIn(300).addClass("mapX");
-        // console.log("i am resizing!");
-        // $(".map_wrap_scroll").delay(300).addClass("mapX");
     }
 }
