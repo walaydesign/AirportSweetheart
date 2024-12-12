@@ -171,14 +171,6 @@ function sendEmail(){
     );
 }
 
-$(".map_wrap").on("scroll", function() {
-    // if($(window).width() <= 991 && $(".map_wrap_scroll").hasClass("mapX")) {
-        // $(".map_wrap_scroll").fadeOut(300);
-    // }
-    // console.log("i am scrolling!");
-    // $(".map_wrap_scroll").fadeOut(300);
-})
-
 $(window).on("resize", function() {
     mapResize();
 })
